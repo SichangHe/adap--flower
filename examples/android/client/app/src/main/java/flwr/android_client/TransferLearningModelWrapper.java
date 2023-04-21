@@ -42,6 +42,7 @@ public class TransferLearningModelWrapper implements Closeable {
     TransferLearningModelWrapper(Context context) {
         model =
                 new TransferLearningModel(
+                        /// This is where we can change the model.
                         new AssetModelLoader(context, "model"),
                         Arrays.asList("cat", "dog", "truck", "bird",
                                 "airplane", "ship", "frog", "horse", "deer",

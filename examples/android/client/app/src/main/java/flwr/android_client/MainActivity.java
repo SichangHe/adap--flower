@@ -219,20 +219,22 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, "Handling FitIns");
                     activity.setResultText("Handling Fit request from the server.");
 
+                    /// FitIns.parameters.tensor in transport.proto.
                     List<ByteString> layers = message.getFitIns().getParameters().getTensorsList();
 
                     Scalar epoch_config = message.getFitIns().getConfigMap().getOrDefault("local_epochs", Scalar.newBuilder().setSint64(1).build());
 
                     assert epoch_config != null;
-                    int local_epochs = (int) epoch_config.getSint64();
+                    int n_local_epochs = (int) epoch_config.getSint64();
 
+                    /// This is hardcoded but we can read the number of layers from `layers`.
                     // Our model has 10 layers
                     ByteBuffer[] newWeights = new ByteBuffer[10] ;
                     for (int i = 0; i < 10; i++) {
                         newWeights[i] = ByteBuffer.wrap(layers.get(i).toByteArray());
                     }
 
-                    Pair<ByteBuffer[], Integer> outputs = activity.fc.fit(newWeights, local_epochs);
+                    Pair<ByteBuffer[], Integer> outputs = activity.fc.fit(newWeights, n_local_epochs);
                     c = fitResAsProto(outputs.first, outputs.second);
                 } else if (message.hasEvaluateIns()) {
                     Log.e(TAG, "Handling EvaluateIns");

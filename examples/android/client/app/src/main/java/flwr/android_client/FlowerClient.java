@@ -62,6 +62,10 @@ public class FlowerClient {
         }
     }
 
+    /// Data are both loaded processed here for this demo.
+    /// This is cheating because:
+    /// 1. This processing is hardcoded.
+    /// 2. We would not have all the data at the beginning.
     public void loadData(int device_id) {
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(this.context.getAssets().open("data/partition_" + (device_id - 1) + "_train.txt")));
