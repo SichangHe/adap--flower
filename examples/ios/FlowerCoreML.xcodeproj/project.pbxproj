@@ -100,12 +100,12 @@
 		21A77B292865B4CB0062EBD8 /* MNIST_Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 21A77B252865B4CB0062EBD8 /* MNIST_Model.mlmodel */; };
 		21A77B2A2865B4CB0062EBD8 /* mnist_train.csv.lzfse in Resources */ = {isa = PBXBuildFile; fileRef = 21A77B272865B4CB0062EBD8 /* mnist_train.csv.lzfse */; };
 		21A77B2B2865B4CB0062EBD8 /* mnist_test.csv.lzfse in Resources */ = {isa = PBXBuildFile; fileRef = 21A77B282865B4CB0062EBD8 /* mnist_test.csv.lzfse */; };
-		21A77B302865B5420062EBD8 /* Flower in Frameworks */ = {isa = PBXBuildFile; productRef = 21A77B2F2865B5420062EBD8 /* Flower */; };
 		21A77B36286EEC420062EBD8 /* MNIST_Model.mlmodel in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A77B252865B4CB0062EBD8 /* MNIST_Model.mlmodel */; };
 		21B540712865B14000185DEE /* FlowerCoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B540702865B14000185DEE /* FlowerCoreMLApp.swift */; };
 		21B540732865B14000185DEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B540722865B14000185DEE /* ContentView.swift */; };
 		21B540752865B14100185DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B540742865B14100185DEE /* Assets.xcassets */; };
 		21B540782865B14100185DEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B540772865B14100185DEE /* Preview Assets.xcassets */; };
+		3F461A112AA4A33100912861 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 3F461A102AA4A33100912861 /* SwiftProtobuf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -228,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21A77B302865B5420062EBD8 /* Flower in Frameworks */,
+				3F461A112AA4A33100912861 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +423,7 @@
 			);
 			name = FlowerCoreML;
 			packageProductDependencies = (
-				21A77B2F2865B5420062EBD8 /* Flower */,
+				3F461A102AA4A33100912861 /* SwiftProtobuf */,
 			);
 			productName = FlowerCoreML;
 			productReference = 21B5406D2865B14000185DEE /* FlowerCoreML.app */;
@@ -454,7 +454,7 @@
 			);
 			mainGroup = 21B540642865B14000185DEE;
 			packageReferences = (
-				09EDEEC8287FE30900D5E0A0 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				3F461A0F2AA4A33100912861 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = 21B5406E2865B14000185DEE /* Products */;
 			projectDirPath = "";
@@ -786,7 +786,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		09EDEEC8287FE30900D5E0A0 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+		3F461A0F2AA4A33100912861 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-protobuf.git";
 			requirement = {
@@ -797,13 +797,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		21A77B2F2865B5420062EBD8 /* Flower */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Flower;
-		};
 		21A77B312865B55D0062EBD8 /* Flower */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Flower;
+		};
+		3F461A102AA4A33100912861 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F461A0F2AA4A33100912861 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
