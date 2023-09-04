@@ -11,7 +11,6 @@
 		19764EED297D3ABE009F3E5D /* BenchmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19764EEC297D3ABE009F3E5D /* BenchmarkModel.swift */; };
 		19764EEF297D3AC9009F3E5D /* BenchmarkSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19764EEE297D3AC9009F3E5D /* BenchmarkSuite.swift */; };
 		21075DC929788ED400311461 /* FLiOSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21075DC829788ED400311461 /* FLiOSModel.swift */; };
-		216A90382A0CBE5400E0B532 /* flwr in Frameworks */ = {isa = PBXBuildFile; productRef = 216A90372A0CBE5400E0B532 /* flwr */; };
 		21A77AC32865B22B0062EBD8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A77A6F2865B22A0062EBD8 /* Array+Extensions.swift */; };
 		21A77AC42865B22B0062EBD8 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A77A702865B22A0062EBD8 /* Math.swift */; };
 		21A77AC52865B22B0062EBD8 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A77A712865B22A0062EBD8 /* UIImage+CVPixelBuffer.swift */; };
@@ -229,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B5A2C6294C848000B0ABC6 /* flwr in Frameworks */,
-				216A90382A0CBE5400E0B532 /* flwr in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +438,6 @@
 			name = FLiOS;
 			packageProductDependencies = (
 				50B5A2C5294C848000B0ABC6 /* flwr */,
-				216A90372A0CBE5400E0B532 /* flwr */,
 			);
 			productName = FlowerCoreML;
 			productReference = 21B5406D2865B14000185DEE /* FLiOS.app */;
@@ -471,7 +468,7 @@
 			);
 			mainGroup = 21B540642865B14000185DEE;
 			packageReferences = (
-				216A90362A0CBE5400E0B532 /* XCRemoteSwiftPackageReference "flower-swift" */,
+				3F206E462AA5CBF300300031 /* XCRemoteSwiftPackageReference "adap--flower-swift" */,
 			);
 			productRefGroup = 21B5406E2865B14000185DEE /* Products */;
 			projectDirPath = "";
@@ -805,22 +802,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		216A90362A0CBE5400E0B532 /* XCRemoteSwiftPackageReference "flower-swift" */ = {
+		3F206E462AA5CBF300300031 /* XCRemoteSwiftPackageReference "adap--flower-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adap/flower-swift.git";
+			repositoryURL = "https://github.com/SichangHe/adap--flower-swift.git";
 			requirement = {
-				branch = main;
+				branch = "guarantee-parameter-assignment";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		216A90372A0CBE5400E0B532 /* flwr */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 216A90362A0CBE5400E0B532 /* XCRemoteSwiftPackageReference "flower-swift" */;
-			productName = flwr;
-		};
 		21A77B312865B55D0062EBD8 /* Flower */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Flower;
